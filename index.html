@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Ucenik</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Montserrat", sans-serif;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .nav-links a {
+            margin-left: 30px;
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #00f5d4;
+        }
+
+        /* HERO */
+        .hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 64px;
+        }
+
+        .hero span {
+            background: linear-gradient(90deg, #00f5d4, #00bbf9);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 20px;
+            opacity: 0.8;
+        }
+
+        .about {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        /* BUTTON */
+        button {
+            padding: 14px 32px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #00f5d4, #00bbf9);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 187, 249, 0.4);
+        }
+
+        /* SECTIONS */
+        .section {
+            padding: 120px 80px;
+            text-align: center;
+        }
+
+        /* GRID */
+        .grid {
+            margin-top: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.4s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 16px;
+            margin-bottom: 20px;
+        }
+
+        /* CONTACT */
+        .contact-form {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 60%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            border: none;
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Moje Ime</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Hi, I'm <span>Moje Ime</span></h1>
+            <p>Frontend Developer & UI Enthusiast</p>
+            <a href="#portfolio">
+                <button>View My Work</button>
+            </a>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="section" id="portfolio">
+        <h2>My Portfolio</h2>
+
+        <div class="grid">
+            <div class="card">
+                <img src="img/socialNetwork.jpg">
+                <h3>Social Network App</h3>
+                <p>Modern responsive web application.</p>
+            </div>
+
+            <div class="card">
+                <img src="img/chart.jpg">
+                <h3>Analytics Dashboard</h3>
+                <p>Data visualization platform.</p>
+            </div>
+
+            <div class="card">
+                <img src="img/hexa.jpg">
+                <h3>Creative Landing Page</h3>
+                <p>Minimal UI concept design.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section glass about" id="about">
+        <h2>About Me</h2>
+        <p>
+            Passionate web developer focused on creating clean and user-friendly
+            digital experiences. I enjoy modern UI trends and interactive design.
+        </p>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+        <h2>Contact</h2>
+
+        <form class="contact-form">
+            <input type="text" placeholder="Name" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 Moje Ime</p>
+    </footer>
+
+</body>
+
+</html>
